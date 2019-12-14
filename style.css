@@ -2,39 +2,46 @@ body {
 	font-family: 'Josefin Sans', sans-serif;
 	background: url(images/bg-pattern-desktop.svg);
 	display: flex;
+	justify-content: space-between;
 	margin: 0;
 }
 
 .column {
-	float: left;
+	//float: left;
 	height: 100%;
 }
 
 .column-one {
 	margin: 50px;
+	padding: 2% 8% 0 8%;
+}
+
+.column-two {
+	max-width: 100%;
+  	margin: auto;
 }
 
 body p {
 	font-size: 16px;
 	font-weight: 400;
 	color: #CE9797;
-	padding: 15px 30px 30px 30px;
+	padding-bottom: 7%;
 	line-height: 1.6em;
 }
 
 .logo {
-	padding: 20px 30px 40px 30px;
+	//padding: 20px 30px 40px 30px;
 }
 
 .title-text {
 	font-size: 40px;
-	letter-spacing: 5px;
+	letter-spacing: 10px;
 	text-transform: uppercase;
-	padding-left: 30px;
+	padding-top: 12%;
 }
 
 .first {
-	font-weight: 300;
+	font-weight: 400;
 	color: #CE9797;
 }
 
@@ -42,12 +49,16 @@ body p {
 	font-weight: 600;
 }
 
+form {
+	display: flex;
+}
+
 input {
+	flex: 1;
 	border-radius: 20px;
-    border: 1px solid gray;
     width: 70%;
     padding: 12px;
-    margin-left: 30px;
+    //margin-left: 30px;
     background-color: rgba(0, 0, 0, 0);
 }
 
@@ -55,8 +66,21 @@ input:focus {
 	outline: none;
 }
 
+input::placeholder {
+	color: hsla(0, 36%, 70%, 0.589)
+}
+
+.inactive {
+	border: 1px solid hsla(0, 8%, 56%, 0.459);
+}
+
+.empty-field {
+	border: 1px solid red;
+}
+
 .submit-button {
 	border: none;
+	z-index: 2;
     padding: 10px;
     border-radius: 20px;
     width: 75px;
@@ -75,3 +99,14 @@ input:focus {
 .submit-button:focus {
 	outline: none;
 }
+
+.error-text {
+	font-size: 0.7em;
+	display: none;
+	padding: 7%;
+}
+
+.small-img {
+	display: none;
+}
+
