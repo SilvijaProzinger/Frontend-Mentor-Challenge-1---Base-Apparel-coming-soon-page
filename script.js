@@ -10,7 +10,7 @@ const checkEmail = () => {
 		document.getElementById('inputField').classList.add('empty-field');
 		document.getElementById('err').style.display ='inline';
 	} else if (form.match(email)) {
-		form = '';
+		document.querySelector('form').reset();
 		document.getElementById('err').style.display ='none';
 		document.getElementById('inputField').classList.add('inactive');
 		document.getElementById('inputField').classList.remove('empty-field');
